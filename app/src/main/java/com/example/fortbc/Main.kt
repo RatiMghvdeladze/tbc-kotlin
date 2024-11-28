@@ -15,6 +15,6 @@ fun main() {
 
         println("do you wish to execute the program again? <Y/N>")
         val answer = readlnOrNull()?.uppercase() ?: break
-        if (answer != "YES") break
+        if (answer != "Y") break
     }
 }
