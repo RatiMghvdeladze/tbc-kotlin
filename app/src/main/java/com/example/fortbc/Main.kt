@@ -45,7 +45,7 @@ helper(2) -> 2 + helper(1), .................
 helper(1) -> 1 + helper(0), stack[helper(10), helper(9), helper(8), helper(7), .......helper(1)]
 
 helper(0) checks if n == 0 (true) so returns 0 (it is base case), and after reaching the base case,
-functions starts returning values from stack.
+the function starts returning values from stack.
 helper(0) does not stay on the stack because
 it does not call anything else, it directly returns 0 and pops off the stack.
 
@@ -54,11 +54,11 @@ helper(1) -> 1 + 0 = 1,  "0" is from helper(0) which returns 0.
 helper(2) -> 2 + 1 = 3,   "1" is from helper(1) which returns 1
 helper(3) -> 3 + 3 = 6,   "3" is from helper(2) which returns 3
 helper(4) -> 4 + 6 = 10,  "6" is from helper(3) which returns 6
-helper(5) -> 10 + 5 = 15
-helper(6) -> 15 + 6 = 21
-helper(7) -> 21 + 7 = 28
-helper(8) -> 28 + 8 = 36
-helper(9) -> 36 + 9 = 45
+helper(5) -> 10 + 5 = 15, .....
+helper(6) -> 15 + 6 = 21, .....
+helper(7) -> 21 + 7 = 28, .....
+helper(8) -> 28 + 8 = 36, .....
+helper(9) -> 36 + 9 = 45, .....
 finally, helper(10) -> 45 + 10 = 55
  */
 
@@ -68,8 +68,8 @@ fun reverse(n: Int): Int {
 }
 /*
 explanation:
-firstly we should convert int to string because of the its built-in function -> reversed(),
-integers does not have this function so we should convert it to string, after reverse convert the
+first, we should convert int to string because of its built-in function -> reversed().
+integer does not have this function, so we should convert it to string, and after reverse, convert the
 reversed string to the integer, which automatically drops leading zero.
  */
 
