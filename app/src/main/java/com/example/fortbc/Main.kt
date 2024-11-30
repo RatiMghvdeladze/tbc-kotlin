@@ -9,7 +9,7 @@ fun lcm(a: Int, b: Int): Int {
 }
 
 //task3
-fun contains(str: String): Boolean{
+fun isInclude(str: String): Boolean{
     return "$" in str
 }
 
@@ -85,8 +85,8 @@ fun main(){
     println(gcd(20, 50))
     println(lcm(17, 18))
     println(lcm(20,500))
-    println(contains("$4sokfas"))
-    println(contains("4sokfas"))
+    println(isInclude("$4sokfas"))
+    println(isInclude("4sokfas"))
     println(sum100())
     println(reverse(10220))
     println(isPlaindrome("A man, a plan, a canal, Panama"))
