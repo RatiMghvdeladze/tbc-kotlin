@@ -64,11 +64,11 @@ fun main(){
 
     println(obj.gcd(0,0)) //0
     println(obj.gcd(0,5)) //5
-    println(obj.gcd(-10, -50)) //output: 10, it must be positive
-
+    println(obj.gcd(-10, -50)) //10
 
     println(obj.lcm(0, 0)) //wikipedia says that lcm(0,0) = 0
     println(obj.lcm(0, 10)) //undefined
+    println(obj.lcm(10, 0)) //undefined
     println(obj.lcm(-30, 10)) //30
     println(obj.lcm(20,500)) //500
 
@@ -80,5 +80,4 @@ fun main(){
 
     println(obj.isPlaindrome("A man, a plan, a canal, Panama")) //true
     println(obj.isPlaindrome("ook")) //false
-
 }
