@@ -5,13 +5,14 @@ class MathOperations {
     fun gcd(a: Int, b: Int): Int {
         return if (b == 0) a.absoluteValue else gcd(b, a % b)
     }
+    // gcd(0, 0) is commonly defined as 0 (wikipedia)
 
 //    lcm and gcd both of them must be a positive
 
 
     //task2
-    fun lcm(a: Int, b: Int): Int {
-        return if(a == 0 || b == 0) 0 else (a * b).absoluteValue / gcd(a, b)
+    fun lcm(a: Int, b: Int): Any{
+        return if(a == 0 && b == 0) 0 else if(a == 0 || b == 0) "undefined" else (a * b).absoluteValue / gcd(a, b)
     }
 
 //    wikipedia says that lcm(0,0) = 0
@@ -23,7 +24,7 @@ class MathOperations {
 
     //task4
     fun sumEven(n: Int): Int {
-            return if(n <= 0) 0 else if (n%2==0) (n+sumEven(n-2)) else sumEven(n-1)
+        return if(n <= 0) 0 else if (n%2==0) (n+sumEven(n-2)) else sumEven(n-1)
     }
     /*
     rodesac n luwia chveulebrivad asrulebs am operacias -> (n+sumEven(n-2)), xolo tu kentia
@@ -62,18 +63,22 @@ fun main(){
     val obj = MathOperations()
 
     println(obj.gcd(0,0)) //0
+    println(obj.gcd(0,5)) //5
     println(obj.gcd(-10, -50)) //output: 10, it must be positive
 
-    println(obj.lcm(0, 0)) //wikipedia says that lcm(0,0) = 0
-    println(obj.lcm(20,500))
 
-    println(obj.contains("$4sokfas"))
-    println(obj.contains("4sokfas"))
+    println(obj.lcm(0, 0)) //wikipedia says that lcm(0,0) = 0
+    println(obj.lcm(0, 10)) //undefined
+    println(obj.lcm(-30, 10)) //30
+    println(obj.lcm(20,500)) //500
+
+    println(obj.contains("$4sokfas")) //true
+    println(obj.contains("4sokfas")) //false
 
     println(obj.sumEven(101))
     println(obj.reverse(10220))
 
-    println(obj.isPlaindrome("A man, a plan, a canal, Panama"))
-    println(obj.isPlaindrome("ook"))
+    println(obj.isPlaindrome("A man, a plan, a canal, Panama")) //true
+    println(obj.isPlaindrome("ook")) //false
 
 }
