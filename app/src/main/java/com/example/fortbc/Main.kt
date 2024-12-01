@@ -1,6 +1,6 @@
 import kotlin.math.absoluteValue
 
-class Tasks {
+class MathOperations {
     //task1
     fun gcd(a: Int, b: Int): Int {
         return if (b == 0) a.absoluteValue else gcd(b, a % b)
@@ -17,7 +17,7 @@ class Tasks {
 //    wikipedia says that lcm(0,0) = 0
 
     //task3
-    fun isInclude(str: String): Boolean {
+    fun contains(str: String): Boolean {
         return "$" in str
     }
 
@@ -59,7 +59,7 @@ class Tasks {
 
 //testing
 fun main(){
-    val obj = Tasks()
+    val obj = MathOperations()
 
     println(obj.gcd(0,0)) //0
     println(obj.gcd(-10, -50)) //output: 10, it must be positive
@@ -67,8 +67,8 @@ fun main(){
     println(obj.lcm(0, 0)) //wikipedia says that lcm(0,0) = 0
     println(obj.lcm(20,500))
 
-    println(obj.isInclude("$4sokfas"))
-    println(obj.isInclude("4sokfas"))
+    println(obj.contains("$4sokfas"))
+    println(obj.contains("4sokfas"))
 
     println(obj.sumEven(101))
     println(obj.reverse(10220))
